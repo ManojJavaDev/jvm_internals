@@ -98,7 +98,10 @@ Generational Heap Memory — Divides heap into Young Generation (short-lived obj
 Stack-based Memory Allocation — Uses LIFO for efficient allocation and deallocation.
 JIT Compilation — Reduces redundant bytecode interpretation to optimize execution.
 
-3. Class Loading Mechanism
+
+
+**3. Class Loading Mechanism**
+   
 3.1. What is class loading in Java, and why is it needed?
 Class loading is the process by which the JVM loads Java class files into memory at runtime. This allows Java programs to be dynamic and modular, as classes are only loaded when required, improving efficiency and reducing startup time.
 
@@ -144,7 +147,9 @@ NoClassDefFoundError occurs when a class was available at compile-time but missi
 3.10. How does the JVM ensure security during class loading?
 JVM performs bytecode verification during the linking phase to prevent unauthorized access or malicious code execution. The Security Manager can also restrict certain operations to enhance security.
 
-4. Memory Management in JVM
+**
+4. Memory Management in JVM**
+   
 4.1. What are the different memory areas in the JVM?
 Answer: The JVM divides memory into several runtime data areas:
 
@@ -187,7 +192,8 @@ Optimize object creation and use StringBuilder instead of String concatenation.
 Avoid memory leaks by properly handling static references, collections, and event listeners.
 
 
-5. Garbage Collection in JVM
+**5. Garbage Collection in JVM**
+   
 5.1. What is garbage collection in Java, and why is it needed?
 Garbage collection (GC) in Java is an automatic memory management process that reclaims memory occupied by objects that are no longer in use. It eliminates the need for manual memory deallocation, reducing memory leaks and improving application stability.
 
@@ -205,7 +211,9 @@ ZGC & Shenandoah GC — Designed for ultra-low pause times and large heaps, intr
 5.4. What is Generational Garbage Collection in Java?
 Generational garbage collection divides the heap into Young Generation, Old (Tenured) Generation, and Permanent (Metaspace in Java 8+) Generation. Objects are initially allocated in the Young Generation, and those that survive multiple GC cycles are promoted to the Old Generation. This approach optimizes performance by collecting short-lived
 
-6. JVM Performance Optimization
+
+**6. JVM Performance Optimization
+   **
 6.1. Why is JVM performance tuning important in enterprise applications?
 JVM performance tuning is crucial because it directly impacts application speed, resource utilization, and scalability. Poorly optimized JVM settings can lead to high memory consumption, slow response times, and frequent garbage collection pauses, affecting overall application performance.
 
@@ -288,7 +296,9 @@ Continuously monitor heap and GC activity in production
 Use profiling tools to detect memory leaks and CPU bottlenecks
 Upgrade to newer Java versions for performance improvements (e.g., ZGC in Java 11+ for low-latency applications)
 
-7. Just-In-Time (JIT) Compiler
+
+**7. Just-In-Time (JIT) Compiler**
+   
 7.1. What is a Just-In-Time (JIT) Compiler in Java?
 The Just-In-Time (JIT) compiler is a component of the JVM that improves the performance of Java applications by converting bytecode into native machine code at runtime. Instead of interpreting bytecode line by line, JIT compiles frequently used code paths into optimized machine code, reducing execution time and enhancing efficiency.
 
@@ -326,7 +336,8 @@ JVM provides several options to monitor JIT behavior:
 -XX:+TieredCompilation: Enables both C1 and C2 compilers for a balance between startup and peak performance.
 Profiling tools like JVisualVM and JITWatch: Analyze JIT activity and performance bottlenecks.
 
-8. JVM Security & Best Practices
+**8. JVM Security & Best Practices**
+   
 8.1. Why is security important in JVM, and how does it protect Java applications?
 JVM security is crucial because Java applications often run in diverse environments, including untrusted sources like web browsers, enterprise systems, and cloud platforms. JVM provides a security model that includes bytecode verification, class loading restrictions, and a security manager to prevent unauthorized access, ensuring applications run safely and reliably.
 
@@ -363,7 +374,9 @@ The Java security policy file (java.policy) defines permissions for Java applica
 8.8. Can JVM security mechanisms be bypassed, and how can developers prevent it?
 While JVM security is robust, attackers can attempt to bypass it using techniques like reflection, deserialization exploits, or unsafe operations. Developers should prevent security bypasses by disabling unnecessary features, using code signing, validating user inputs, and following secure coding practices to minimize attack surfaces.
 
-9. Common JVM Interview Questions & Answers
+
+**9. Common JVM Interview Questions & Answers**
+    
 9.1. Explain JVM architecture in detail.
 JVM (Java Virtual Machine) is responsible for running Java programs by converting bytecode into machine code. It consists of several components:
 
@@ -404,7 +417,9 @@ JConsole & VisualVM: Provide real-time monitoring of heap usage, CPU consumption
 Java Flight Recorder (JFR) & Java Mission Control (JMC): Help analyze application behavior over time.
 JVM Flags: Tweaking -Xms, -Xmx, and -XX options can fine-tune memory usage and garbage collection.
 
-10. Conclusion & Best Resources for JVM Learning
+**
+10. Conclusion & Best Resources for JVM Learning**
+    
 10.1. Why is understanding JVM internals important for Java developers?
 Understanding JVM internals helps developers write efficient, optimized, and scalable Java applications. It allows them to troubleshoot performance issues, optimize memory usage, and fine-tune garbage collection for better application performance.
 
